@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <header>
+        head
+    </header> -->
+
+    <main>
+        <div class="main-content">
+            <h1 class="main-heading">Student Records Manager</h1>
+            <div class="create-read-div">
+                <div class="create-record-container">
+                    <!-- take a student's name, and scores for 3 subjects -->
+                    <input class="record-name-input-field" type="text" class="student-name" placeholder="Student Name"
+                        maxlength="25">
+                    <div class="scores-inputs-container">
+
+                        <input class="record-score-input-field" type="number" class="subject-1" placeholder="score 1"
+                            min="0" max="100" maxlength="3">
+                        <input class="record-score-input-field" type="number" class="subject-2" placeholder="score 2"
+                            min="0" max="100" maxlength="3">
+                        <input class="record-score-input-field" type="number" class="subject-3" placeholder="score 3"
+                            min="0" max="100" maxlength="3">
+                    </div>
+
+                    <button class="btn create-record-btn">
+                        Create Record
+                    </button>
+
+                </div>
+                <div class="results-container">
+                    <p class="mb"><Strong>Average Score: </Strong><span class="average-score"></span></p>
+                    <p class="mb"><Strong>Hight Total Score:</Strong><span class="highest-score"></span></p>
+                    <p class="mb"><Strong>Lowest Total Score:</Strong><span class="lowest-score"></span></p>
+                </div>
+            </div>
+            <div class="show-records-list-btn-container">
+                <button class=" btn show-records-list-btn" onclick="window.location.href='records-table/index.html'">
+                    Show all records
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- <footer>
+        footer
+    </footer> -->
+
+    <script src="app.js"></script>
+</body>
+
+</html>
