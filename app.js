@@ -20,7 +20,7 @@ recordNameInputField.addEventListener("input", (e) => {
 const validateScoreInput = (input) => {
   let value = input.value;
 
-  if (!/^\d*$/.test(value)) {
+  if (!/^\d*$/.test(value) || value === "e" || value === "E") {
     input.value = value.replace(/\D/g, "");
   }
 
