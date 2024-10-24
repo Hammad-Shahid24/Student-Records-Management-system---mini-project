@@ -20,18 +20,17 @@ recordNameInputField.addEventListener("input", (e) => {
 const validateScoreInput = (input) => {
   let value = input.value;
 
-  if (!/^\d*$/.test(value) || value === "e" || value === "E") {
-    input.value = value.replace(/\D/g, "");
-  }
-
-  value = input.value;
+  // Remove non-digit characters and leading zeros (except for zero itself)
+  value = value.replace(/[^0-9]/g, "").replace(/^0+(?!$)/, "");
 
   // Ensure the value is within the range 0-100
   if (value > 100) {
-    input.value = 100;
+    value = 100;
   } else if (value < 0) {
-    input.value = 0;
+    value = 0;
   }
+
+  input.value = value;
 };
 
 recordScoreInputFields[0].addEventListener("input", (e) => {
